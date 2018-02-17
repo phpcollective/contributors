@@ -1,0 +1,54 @@
+{
+    "name": "phpcollective/contributors",
+    "type": "library",
+    "description": "Contributors List of any package",
+    "keywords": [
+        "phpcollective",
+        "contributors.txt",
+        "humans.txt"
+    ],
+    "homepage": "https://github.com/phpcollective/contributors",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Al Amin Chayan",
+            "email": "mail@chayan.me",
+            "homepage": "https://stackoverflow.com/users/3113693/chayan",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": ">=5.5"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPCllective\\Contributors\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPCllective\\Contributors\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "PHPCollective\\Contributors\\ContributorsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
